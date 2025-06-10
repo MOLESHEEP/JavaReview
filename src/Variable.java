@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Variable {
@@ -66,6 +67,32 @@ public class Variable {
 
     public void IOoperation(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please input a Integer");
+        System.out.println("Please input your age \n");
+        int age = scanner.nextInt();
+        System.out.println("Please input your name: \n");
+        String name = scanner.next();
+        System.out.println("Please input a float number: \n");
+        float num = scanner.nextFloat();
+        System.out.println("Please input a Double number: \n");
+        double num1 = scanner.nextDouble();
+
+        Random ran = new Random();
+        double num2 = ran.nextDouble();
+        double res = (num +num1)/ age * num2;
+        System.out.println("Today "+name+"`s Lucky number is : "+res+" ! \n");
+    }
+
+    public void defineTuples(){
+        int[] arr = new int[10];
+        int[] arr1 = new int[]{1,2};
+        int[] arr2 = {1,2};
+        int[][] arr3 = new int[4][4];
+        int[][] arr4 = new int[][]{{},{},{},{}};
+
+        int[] arr5 = {1,2,3,4,5,6,7};
+
+        for(int i = 0;i<arr5.length;i++){
+            System.out.println(arr5[i]);
+        }
     }
 }
