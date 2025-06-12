@@ -3,7 +3,13 @@
 public class Main {
     public static void main(String[] args) {
         Variable variable = new Variable();
-        variable.defineVariable();
-        variable.IOoperation();
+        //variable.defineVariable();
+        //variable.IOoperation();
+        //variable.defineTuples();
+        //variable.equalAndequalMark();
+        variable.stringOperation();
+        variable.stringBuilderTest();
+        variable.stringJoiner();
+        variable.arrayList();
     }
 }
