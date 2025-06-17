@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.IOException;
+import java.lang.reflect.Field;
 import java.util.*;
 
 public class Variable {
@@ -6,12 +9,23 @@ public class Variable {
     public static final boolean flag = false;
     public static final int numOfdec = 5;
     public static int count;
+
+    private final String filePath;
+
+    public Variable(String filePath){
+        this.filePath = filePath;
+    }
     //静态变量的作用是，无论创建多少个对象，静态变量只有一个，这意味着可以用作计数器等作用
     //静态函数的作用是，无论创建多少个对象，静态函数只运行一次，这意味着可以用于初始化静态变量或者加载静态设置。
     //静态类的作用是，其不能直接访问静态变量或静态方法，适合用于作为组织类关系的类，或作为命名空间
-    public static void find(){
-
+    public void IoTest() throws IOException {
+        File file1 = new File(this.filePath);
+        System.out.println("File path : "+file1.getPath());
+        System.out.println("File abs path : "+file1.getAbsolutePath());
+        System.out.println("File canonical path : "+file1.getCanonicalPath());
+        System.out.println();
     }
+
     public void defineVariable(){
         int a = 10;
         double b = 20.d;
